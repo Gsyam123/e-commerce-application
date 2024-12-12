@@ -1,10 +1,9 @@
 import "./App.css";
-import { HomePage } from "./Components/HomePage";
-import { Login } from "./Components/Login";
-import { Navbar } from "./Components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Registration } from "./Components/Registration";
-import { PrivateRoute } from "./Components/PrivateRoute ";
+import { Registration } from "./stores/components/Registration";
+import { PrivateRoute } from "./stores/components/PrivateRoute ";
+import { Login } from "./stores/components/Login";
+import LandingPage from "./stores/pages/LandingPage";
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
             path="/home"
             element={
               <PrivateRoute>
-                <HomePage />
+                <LandingPage />
               </PrivateRoute>
             }
           />
